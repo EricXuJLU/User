@@ -1,0 +1,21 @@
+#配置信息
+title = "Config"
+log_level = "debug"
+# toml 格式教程 https://segmentfault.com/a/1190000000477752
+
+[redis]
+    host = "127.0.0.1"
+    port = ":6379"
+    password = "360360"
+    database = 2
+
+[mysql]
+    #host = "10.17.59.124"
+    host = "127.0.0.1"
+    port = ":3306"
+    username = "root"
+    password = "root"
+    database = "feiyanguser"
+
+[server]
+    grpc = ":9287"
