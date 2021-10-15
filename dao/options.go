@@ -1,8 +1,8 @@
 package dao
 
 import (
-	"database/sql"
 	"github.com/go-redis/redis/v8"
+	"gorm.io/gorm"
 )
 
 type Option interface {
@@ -10,12 +10,12 @@ type Option interface {
 }
 
 // WithDB .
-func WithDB(db *sql.DB) Option {
+func WithDB(db *gorm.DB) Option {
 	return withDB{db}
 }
 
 type withDB struct {
-	db *sql.DB
+	db *gorm.DB
 }
 
 func (w withDB) Apply(d *Dao) error {

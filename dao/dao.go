@@ -1,12 +1,12 @@
 package dao
 
 import (
-	"database/sql"
 	"github.com/go-redis/redis/v8"
+	"gorm.io/gorm"
 )
 
 type Dao struct {
-	DB *sql.DB
+	DB *gorm.DB
 	R  *redis.Client
 }
 
